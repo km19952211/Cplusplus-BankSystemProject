@@ -36,7 +36,7 @@ public:
 			{
 				cout << "No Enough Balance \n";
 			}
-			.
+			
 		}
 		else
 		{
