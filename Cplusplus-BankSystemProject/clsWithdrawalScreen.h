@@ -24,18 +24,25 @@ public:
 		cout << "\nAre you sure you want to make the Withdrawal ? " << endl;
 		char a;
 		cin >> a;
-		if (a == 'Y' || a == 'y') {
-			Client.Withdraw(amount);
-			cout << "\nSuccseful Withdrawal " << endl;
-			cout << "\nNew Balance is :  " << Client.AccountBalance << endl;
-		}
-		else {
-			cout << "Operation Was Cancelled. \n";
-		}
+		if (a == 'Y' || a == 'y')
+		{
+			if (Client.Withdraw(amount))
+			{
+				cout << "\nSuccseful Withdrawal " << endl;
+				cout << "\nNew Balance is :  " << Client.AccountBalance << endl;
+			}
 
-
-
+			else
+			{
+				cout << "No Enough Balance \n";
+			}
+			.
 		}
+		else
+		{
+			cout << "Operations was cancelled \n"; 
+		}
+	}
 
 	};
 
