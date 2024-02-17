@@ -404,7 +404,14 @@ public:
         cout << "\nEnter Account Balance: ";
         Client.AccountBalance = clsInputValidate::ReadFloatNumber();
     }
+    void Deposit(float Amount) {
+        _AccountBalance += Amount; 
+        Save();
+    }
 
-
+    void Withdraw(float Amount) {
+        _AccountBalance -= Amount;
+        Save();
+    }
 };
 

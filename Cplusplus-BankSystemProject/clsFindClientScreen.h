@@ -5,6 +5,7 @@ class clsFindClientScreen :protected clsScreen
 {
 public:
     static void FindBankClient() {
+        _DrawScreenHeader("\tFind Client Screen");
         string AccountNumber = "";
 
         cout << "\nPlease Enter Account Number: ";

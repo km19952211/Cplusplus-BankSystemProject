@@ -2,12 +2,13 @@
 #include <iostream>
 #include "clsScreen.h"
 #include "clsInputValidate.h"
-#include <iomanip>
+
 #include"clsClientListScreen.h"
 #include"clsAddNewClientScreen.h"
 #include"clsUpdateClientScreen.h"
 #include"clsDeleteClient.h"
 #include"clsFindClientScreen.h"
+#include"clsTransactionsMenu.h"
 
 
 using namespace std;
@@ -32,7 +33,7 @@ private:
 
     static  void _GoBackToMainMenue()
     {
-        cout << setw(37) << left << "" << "\n\tPress any key to go back to Main Menue...\n";
+        cout << setw(37) << left << "" << "\n\tPress any key to go back to Main Menu...\n";
 
         system("pause>0");
         ShowMainMenue();
@@ -72,8 +73,7 @@ private:
 
     static void _ShowTransactionsMenue()
     {
-        cout << "\nTransactions Menue Will be here...\n";
-
+        clsTransactionsMenu::ShowTransactionsMenue();
     }
 
     static void _ShowManageUsersMenue()
@@ -126,6 +126,7 @@ private:
         case enMainMenueOptions::eShowTransactionsMenue:
              system("cls");
             _ShowTransactionsMenue();
+            _GoBackToMainMenue();
             break;
 
         case enMainMenueOptions::eManageUsers:
